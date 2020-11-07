@@ -1,6 +1,5 @@
 package com.example.popatiya;
 
-import com.careerjet.webservice.api.Client;
 import org.json.simple.JSONArray;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +7,8 @@ import org.json.simple.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.careerjet.webservice.api.Client;
 
 @SpringBootApplication
 public class DemoApplication {
