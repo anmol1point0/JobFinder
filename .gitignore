@@ -5,7 +5,8 @@ target/
 !**/src/test/**/target/
 
 main/objects/*
-main/ind*
+main/index
+main/index/*
 
 ### STS ###
 .apt_generated
