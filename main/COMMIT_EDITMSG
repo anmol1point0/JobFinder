@@ -1,0 +1,71 @@
+Calling careerjet jobs API
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   .mvn/wrapper/MavenWrapperDownloader.java
+#	new file:   .mvn/wrapper/maven-wrapper.jar
+#	new file:   .mvn/wrapper/maven-wrapper.properties
+#	new file:   main/HEAD
+#	new file:   main/config
+#	new file:   main/description
+#	new file:   main/hooks/applypatch-msg.sample
+#	new file:   main/hooks/commit-msg.sample
+#	new file:   main/hooks/fsmonitor-watchman.sample
+#	new file:   main/hooks/post-update.sample
+#	new file:   main/hooks/pre-applypatch.sample
+#	new file:   main/hooks/pre-commit.sample
+#	new file:   main/hooks/pre-merge-commit.sample
+#	new file:   main/hooks/pre-push.sample
+#	new file:   main/hooks/pre-rebase.sample
+#	new file:   main/hooks/pre-receive.sample
+#	new file:   main/hooks/prepare-commit-msg.sample
+#	new file:   main/hooks/update.sample
+#	new file:   main/index
+#	new file:   main/index.lock
+#	new file:   main/info/exclude
+#	new file:   main/objects/10/fa14c5ab0134436e2ae435138bf921eb477c60
+#	new file:   main/objects/2c/c7d4a55c0cd0092912bf49ae38b3a9e3fd0054
+#	new file:   main/objects/39/9eab1924e39da570b389b0bef1ca713b3b05c3
+#	new file:   main/objects/3e/5b6be9f2202a13cda7ee1d92a006d4c2fcaec7
+#	new file:   main/objects/41/42082bcb939bbc17985a69ba748491ac6b62a5
+#	new file:   main/objects/43/2599426e9c4324112fe28e999d9f86b38ac2bd
+#	new file:   main/objects/49/8b267a8c7812490d6479839c5577eaaec79d62
+#	new file:   main/objects/54/9e00a2a96fa9d7c5dbc9859664a78d980158c2
+#	new file:   main/objects/61/87dbf4390fc6e28445dd3d988aefb9d1111988
+#	new file:   main/objects/64/2d572ce90e5085986bdd9c9204b9404f028084
+#	new file:   main/objects/6a/756416384c210ada2631f17862f5c01fffa478
+#	new file:   main/objects/6c/9406b7d9320db083eca69b3f8bee9a6c7b50d4
+#	new file:   main/objects/6c/bef5c370d8c3486ca85423dd70440c5e0a2aa2
+#	new file:   main/objects/80/ba94135cc378364af9d3cb2450df48e51faf2c
+#	new file:   main/objects/8b/137891791fe96927ad78e64b0aad7bded08bdc
+#	new file:   main/objects/a1/6b5431b4c3cab50323a3f558003fd0abd87dad
+#	new file:   main/objects/a1/fd29ec14823d8bc4a8d1a2cfe35451580f5118
+#	new file:   main/objects/a4/5eb6ba269cd38f8965cef786729790945d9537
+#	new file:   main/objects/a5/196d1be8fb59edf8062bef36d3a602e0812139
+#	new file:   main/objects/a5/d7b84a673458d14d9aab082183a1968c2c7492
+#	new file:   main/objects/b5/8d1184a9d43a39c0d95f32453efc78581877d6
+#	new file:   main/objects/c8/d43372c986d97911cdc21bd87e0cbe3d83bdda
+#	new file:   main/objects/cb/089cd89a7d7686d284d8761201649346b5aa1c
+#	new file:   main/objects/d4/b2eecd8571ded43995933929ee687f5357e0b4
+#	new file:   main/objects/e6/73bb3980f3c286291809e05f80873852bc3e9c
+#	new file:   main/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+#	new file:   main/objects/ec/17ec1939b7c3e86b7cb6c0c4de6b0818a7e75e
+#	new file:   mvnw
+#	new file:   mvnw.cmd
+#	new file:   pom.xml
+#	new file:   src/main/java/com/example/popatiya/DemoApplication.java
+#	new file:   src/main/resources/application.properties
+#	new file:   src/test/java/com/example/popatiya/DemoApplicationTests.java
+#
+# Changes not staged for commit:
+#	modified:   main/index
+#
+# Untracked files:
+#	main/COMMIT_EDITMSG
+#
