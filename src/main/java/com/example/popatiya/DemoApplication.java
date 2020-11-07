@@ -18,7 +18,6 @@ public class DemoApplication {
         runMethod();
     }
 
-
     static void runMethod() {
 
         Client client = new Client("en_GB");
@@ -30,9 +29,9 @@ public class DemoApplication {
 
         args.put("affid", "b4737c7ce8a491388f964d68339a391f");
 
-        args.put("user_ip",    "117.199.203.226");
+        args.put("user_ip", "117.199.203.226");
         args.put("user_agent", "Chrome");
-        args.put("url",        "https://www.youtube.com/");
+        args.put("url", "https://www.youtube.com/");
 
         JSONObject results = (JSONObject) client.search(args);
 
@@ -41,7 +40,7 @@ public class DemoApplication {
             System.out.println("Number of results:" + results.get("hits"));
             System.out.println("hob size:" + jobs.size());
             int index = 0;
-            while( index < jobs.size()) {
+            while (index < jobs.size()) {
                 JSONObject job = (JSONObject) jobs.get(index);
                 System.out.println("URL         :" + job.get("url"));
                 System.out.println("TITLE       :" + job.get("title"));
