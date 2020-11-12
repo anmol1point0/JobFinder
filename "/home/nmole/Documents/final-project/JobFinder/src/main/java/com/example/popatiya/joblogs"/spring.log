@@ -1,0 +1,7 @@
+2020-11-09 00:06:07.833  INFO 12637 --- [restartedMain] com.example.popatiya.DemoApplication     : Starting DemoApplication on Lucifer with PID 12637 (/home/nmole/Documents/final-project/JobFinder/target/classes started by nmole in /home/nmole/Documents/final-project/JobFinder)
+2020-11-09 00:06:07.886  INFO 12637 --- [restartedMain] com.example.popatiya.DemoApplication     : No active profile set, falling back to default profiles: default
+2020-11-09 00:06:07.982  INFO 12637 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-11-09 00:06:08.739  INFO 12637 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-11-09 00:06:08.811  INFO 12637 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-09 00:06:08.849  INFO 12637 --- [restartedMain] com.example.popatiya.DemoApplication     : Started DemoApplication in 1.579 seconds (JVM running for 2.424)
+2020-11-09 00:06:46.054  INFO 12637 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
