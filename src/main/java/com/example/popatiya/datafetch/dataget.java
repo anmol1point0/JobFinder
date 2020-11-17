@@ -25,16 +25,16 @@ public class dataget {
 
     public void runMethod() throws IOException {
 
-        // FileWriter fw = null;
-        // BufferedWriter bw = null;
-        // PrintWriter pw = null;
-
-        // fw = new FileWriter("/home/nmole/Documents/final-project/", true);
-        // bw = new BufferedWriter(fw);
-        // pw = new PrintWriter(bw);
+        FileWriter fw = null;
+        FileWriter fw1 = null;
+        BufferedWriter bw = null;
+        BufferedWriter bw1 = null;
+        PrintWriter pw = null;
+        PrintWriter pw1 = null;
         // List<jobs> jobsTosave = new ArrayList<>();
         List<String> cities = new ArrayList<>();
         cities.add("jaipur");
+        cities.add("pune");
         cities.add("mumbai");
         cities.add("bangalore");
         cities.add("chennai");
@@ -47,6 +47,13 @@ public class dataget {
         // SimpleDateFormat targetFormat = new SimpleDateFormat("yyyyMMdd");
         // LocalDate curr_date = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
+        fw = new FileWriter("jobslogs-16-Nov.txt", true);
+        fw1 = new FileWriter("Weekly-Report.txt", true);
+        bw1 = new BufferedWriter(fw1);
+        bw = new BufferedWriter(fw);
+        pw = new PrintWriter(bw);
+        pw1 = new PrintWriter(bw1);
+        pw.println("Date:" + LocalDate.now());
         // DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         for (int i = 0; i < 9; i++) {
             Client client = new Client("en_GB");
@@ -58,9 +65,9 @@ public class dataget {
 
             args.put("affid", "b4737c7ce8a491388f964d68339a391f");
 
-            args.put("user_ip", "117.199.203.226");
-            args.put("user_agent", "Chrome");
-            args.put("url", "https://www.youtube.com/");
+            args.put("user_ip", "117.199.233.226");
+            args.put("user_agent", "Mozilla");
+            args.put("url", "https://www.facebook.com/");
 
             JSONObject results = (JSONObject) client.search(args);
             int count = 0;
@@ -83,33 +90,36 @@ public class dataget {
                     LocalDate date = LocalDate.parse(sdate, formatter);
                     LocalDate today = LocalDate.now();
                     if (date.getYear() == today.getYear() && date.getMonth() == today.getMonth()
-                            && date.getDayOfYear() == today.getDayOfYear()) {
+                            && date.getDayOfYear() == today.getDayOfYear() - 1) {
                         count++;
+                        // System.out.println("URL :" + job.get("url"));
+                        // System.out.println("TITLE :" + job.get("title"));
+                        // System.out.println("COMPANY :" + job.get("company"));
+                        // System.out.println("SALARY :" + job.get("salary"));
+                        // System.out.println("DATE :" + job.get("date"));
+                        // System.out.println("DESCRIPTION :" + job.get("description"));
+                        // System.out.println("SITE :" + job.get("site"));
+                        // System.out.println("LOCATIONS :" + job.get("locations"));
+                        pw.print("URL :" + job.get("url") + " ");
+                        pw.print("TITLE :" + job.get("title") + " ");
+                        pw.print("COMPANY :" + job.get("company") + " ");
+                        pw.print("SALARY :" + job.get("salary") + " ");
+                        pw.print("DATE :" + job.get("date") + " ");
+                        pw.print("DESCRIPTION :" + job.get("description") + " ");
+                        pw.print(job.get("SITE :" + "site") + " ");
+                        pw.println(job.get("LOCATIONS :" + "locations"));
                     }
-                    System.out.println("URL :" + job.get("url"));
-                    System.out.println("TITLE :" + job.get("title"));
-                    System.out.println("COMPANY :" + job.get("company"));
-                    System.out.println("SALARY :" + job.get("salary"));
-                    System.out.println("DATE :" + job.get("date"));
-                    System.out.println("DESCRIPTION :" + job.get("description"));
-                    System.out.println("SITE :" + job.get("site"));
-                    System.out.println("LOCATIONS :" + job.get("locations"));
-                    // pw.println("URL :" + job.get("url"));
-                    // pw.println("TITLE :" + job.get("title"));
-                    // pw.println("COMPANY :" + job.get("company"));
-                    // pw.println("SALARY :" + job.get("salary"));
-                    // pw.println("DATE :" + job.get("date"));
-                    // pw.println("DESCRIPTION :" + job.get("description"));
-                    // pw.println("SITE :" + job.get("site"));
-                    // pw.println("LOCATIONS :" + job.get("locations"));
+                    // pw.println("printed");
                     index++;
                 }
             }
-            System.out.println(LocalDate.now() + " " + city + " " + count);
+            pw1.println(LocalDate.now() + " " + city + " " + count);
             // jobsid id = new jobsid(LocalDate.now(), city);
             // jobs myjob = new jobs(id, count);
             // jobsTosave.add(myjob);
         }
+        pw.close();
+        pw1.close();
         // System.out.println("HEY thos is first " + jobsTosave.get(0).getCount() + " "
         // + " "
         // + jobsTosave.get(0).jobsId.getLocation());
