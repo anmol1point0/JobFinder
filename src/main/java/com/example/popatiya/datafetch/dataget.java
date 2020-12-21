@@ -4,8 +4,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -14,9 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 import com.careerjet.webservice.api.Client;
-import com.example.popatiya.entity.jobs;
-import com.example.popatiya.entity.jobsid;
-import com.example.popatiya.repository.myrepo;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -47,7 +42,7 @@ public class dataget {
         // SimpleDateFormat targetFormat = new SimpleDateFormat("yyyyMMdd");
         // LocalDate curr_date = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
-        fw = new FileWriter("jobslogs-16-Nov.txt", true);
+        fw = new FileWriter("jobslogs-20-Dec.txt", true);
         fw1 = new FileWriter("Weekly-Report.txt", true);
         bw1 = new BufferedWriter(fw1);
         bw = new BufferedWriter(fw);
@@ -65,7 +60,7 @@ public class dataget {
 
             args.put("affid", "b4737c7ce8a491388f964d68339a391f");
 
-            args.put("user_ip", "117.199.233.226");
+            args.put("user_ip", "117.199.234.226");
             args.put("user_agent", "Mozilla");
             args.put("url", "https://www.facebook.com/");
 
@@ -90,8 +85,11 @@ public class dataget {
                     LocalDate date = LocalDate.parse(sdate, formatter);
                     LocalDate today = LocalDate.now();
                     if (date.getYear() == today.getYear() && date.getMonth() == today.getMonth()
-                            && date.getDayOfYear() == today.getDayOfYear() - 1) {
+                            && date.getDayOfYear() == today.getDayOfYear()) {
                         count++;
+                        pw.println(job);
+                        // System.out.println(
+                        // "shdcposted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
                         // System.out.println("URL :" + job.get("url"));
                         // System.out.println("TITLE :" + job.get("title"));
                         // System.out.println("COMPANY :" + job.get("company"));
@@ -100,14 +98,14 @@ public class dataget {
                         // System.out.println("DESCRIPTION :" + job.get("description"));
                         // System.out.println("SITE :" + job.get("site"));
                         // System.out.println("LOCATIONS :" + job.get("locations"));
-                        pw.print("URL :" + job.get("url") + " ");
-                        pw.print("TITLE :" + job.get("title") + " ");
-                        pw.print("COMPANY :" + job.get("company") + " ");
-                        pw.print("SALARY :" + job.get("salary") + " ");
-                        pw.print("DATE :" + job.get("date") + " ");
-                        pw.print("DESCRIPTION :" + job.get("description") + " ");
-                        pw.print(job.get("SITE :" + "site") + " ");
-                        pw.println(job.get("LOCATIONS :" + "locations"));
+                        // pw.print("URL :" + job.get("url") + " ");
+                        // pw.print("TITLE :" + job.get("title") + " ");
+                        // pw.print("COMPANY :" + job.get("company") + " ");
+                        // pw.print("SALARY :" + job.get("salary") + " ");
+                        // pw.print("DATE :" + job.get("date") + " ");
+                        // pw.print("DESCRIPTION :" + job.get("description") + " ");
+                        // pw.print(job.get("SITE :" + "site") + " ");
+                        // pw.println(job.get("LOCATIONS :" + "locations"));
                     }
                     // pw.println("printed");
                     index++;
