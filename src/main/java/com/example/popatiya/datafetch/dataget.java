@@ -42,7 +42,7 @@ public class dataget {
         // SimpleDateFormat targetFormat = new SimpleDateFormat("yyyyMMdd");
         // LocalDate curr_date = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy");
-        fw = new FileWriter("jobslogs-20-Dec.txt", true);
+        fw = new FileWriter("jobslogs-26-Dec.txt", true);
         fw1 = new FileWriter("Weekly-Report.txt", true);
         bw1 = new BufferedWriter(fw1);
         bw = new BufferedWriter(fw);
